@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emmanuel Friday's Learning Plan</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0ffff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: navy;
+      text-align: center;
+    }
+
+    .section {
+      background-color: #f9f9f9;
+      border: 2px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    ul {
+      background-color: #e0f7fa;
+      padding: 10px;
+    }
+
+    li {
+      color: #00796b;
+    }
+
+    a {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .box {
+      background-color: #d0f0c0;
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Grid Layout Styles */
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      gap: 10px;
+      background-color: #fafafa;
+      padding: 10px;
+    }
+
+    .grid-container > * {
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #90caf9;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #a5d6a7;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #fff59d;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #ce93d8;
+    }
+
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, ChatGPT. This is My Web Development Journey</h1>
+
+  <div class="section">
+    <h2>What I Want To Learn</h2>
+    <ul>
+      <li>Frontend development</li>
+      <li>Backend development</li>
+      <li>Software engineering</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>My Goals</h2>
+    <ol>
+      <li>Understand Web Development</li>
+      <li>Build Real Projects</li>
+      <li>Become Job Ready</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Useful Resources</h2>
+    <a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a>
+  </div>
+
+  <div class="section">
+    <h2>Logo I Like</h2>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3 Logo" width="300">
+  </div>
+
+  <div class="section">
+    <h2>My Skills</h2>
+    <div class="flex-container">
+      <div class="box">HTML</div>
+      <div class="box">CSS</div>
+      <div class="box">JavaScript</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Learning Preferences</h2>
+    <form>
+      <label for="topic">Topic of Interest:</label>
+      <select id="topic" name="topic">
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="fullstack">Fullstack</option>
+      </select>
+
+      <p>Preferred Learning Style:</p>
+      <label><input type="radio" name="style" value="video"> Video Tutorials</label><br>
+      <label><input type="radio" name="style" value="reading"> Reading Articles</label><br>
+      <label><input type="radio" name="style" value="interactive"> Interactive Practice</label>
+
+      <p>Learning Time:</p>
+      <label><input type="radio" name="time" value="day"> Morning</label><br>
+      <label><input type="radio" name="time" value="night"> Evening</label>
+
+      <p>Skills You're Interested In:</p>
+      <label><input type="checkbox" name="tech" value="html"> HTML</label><br>
+      <label><input type="checkbox" name="tech" value="css"> CSS</label><br>
+      <label><input type="checkbox" name="tech" value="js"> JavaScript</label><br>
+
+      <input type="email" required placeholder="Enter email">
+      <input type="text" minlength="3" maxlength="20" placeholder="Description">
+
+      <br><br>
+      <button type="submit">Submit Learning Goals</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>📐 My Grid Layout</h2>
+    <div class="grid-container">
+      <header>👋 Welcome Banner</header>
+      <aside>🔗 Quick Links</aside>
+      <main>📖 About Me: I am learning web development to become a professional developer.</main>
+      <footer>© 2025 Emmanuel Friday</footer>
+    </div>
+  </div>
+
+</body>
+</html>
